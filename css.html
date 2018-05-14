@@ -1,0 +1,346 @@
+<style>
+/* Fluid grid */
+
+.container_16
+{
+	width: 92%;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+
+.container_16 .grid_4
+{
+	width: 23%;
+}
+
+.container_16 .grid_8
+{
+	width: 48%;
+}
+
+.container_16 .grid_12
+{
+	width: 73%;
+}
+
+.container_16 .grid_16
+{
+	width: 98%;
+}
+
+.alpha
+{
+	margin-left: 0;
+}
+
+.omega
+{
+	margin-right: 0;
+}
+.container_16 .grid_1
+{
+	width: 4.25%;
+}
+
+.container_16 .grid_2
+{
+	width: 10.5%;
+}
+
+.container_16 .grid_3
+{
+	width: 16.75%;
+}
+
+.container_16 .grid_5
+{
+	width: 29.25%;
+}
+
+.container_16 .grid_6
+{
+	width: 35.5%;
+}
+
+.container_16 .grid_7
+{
+	width: 41.75%;
+}
+
+.container_16 .grid_9
+{
+	width: 54.25%;
+}
+
+.container_16 .grid_10
+{
+	width: 60.5%;
+}
+
+.container_16 .grid_11
+{
+	width: 66.75%;
+}
+
+.container_16 .grid_13
+{
+	width: 79.25%;
+}
+
+.container_16 .grid_14
+{
+	width: 85.5%;
+}
+
+.container_16 .grid_15
+{
+	width: 91.75%;
+}
+
+.elements1 {
+	width: 100%;
+}
+.elements2 {
+	width: 49.9%;
+}
+.elements3 {
+	width: 33.3%;
+}
+.elements4 {
+	width: 24.9%;
+}
+.elements5 {
+	width: 19.9%;
+}
+.elements6 {
+	width: 16.6%;
+}
+.elements7 {
+	width: 14.28%;
+}
+.elements8 {
+	width: 12.4%;
+}
+.elements9 {
+	width: 11.1%;
+}
+
+
+/* http://sonspring.com/journal/clearing-floats */
+
+html body * span.clear,
+html body * div.clear,
+html body * li.clear,
+html body * dd.clear
+{
+	background: none;
+	border: 0;
+	clear: both;
+	display: block;
+	float: none;
+	font-size: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://www.positioniseverything.net/easyclearing.html */
+
+.clearfix:after
+{
+	clear: both;
+	content: '.';
+	display: block;
+	visibility: hidden;
+	height: 0;
+}
+
+.clearfix
+{
+	display: inline-block;
+}
+
+* html .clearfix
+{
+	height: 1%;
+}
+
+.clearfix
+{
+	display: block;
+}
+
+
+
+
+/* Custom styling */
+
+  body {
+    font-family: "Arial", "sans-serif";
+    background: #ccc;
+    min-width: 960px;
+	font-size: 62.5%;
+  }
+  
+  .column {
+    display: inline;
+    float: left;
+    position: relative;
+  }
+   
+  .separator {
+    height: 20px;
+	clear: both;
+  }
+  
+  #page-wrapper {
+    position: relative;
+  }
+  
+  .wrapper {
+    display: inline;
+	float: left;
+	padding: 0;
+	position: relative;
+  }
+  .wrapper span {
+    margin-right: 1%;
+	border: 1px solid #eee;
+	display: block;
+  }
+  #secondary-menu .wrapper span {
+    border: 1px solid #ccc;
+  }
+  #left .wrapper {
+    background-color: #FFD602;
+    width: 100%;
+  }
+
+  
+  #secondary-menu {
+    float: right;
+    background-color: #efefef;
+	display: inline;
+  }
+  #primary-menu {
+	background: #fff;
+	float: right;
+	display: inline;
+  }
+  
+  .content {
+    padding: 1%;
+  }
+  
+  .wrapper h2 {
+    border-bottom: 1px solid #eee;
+    width: 80%;
+	margin: 5px auto;
+    padding-right: 16px;
+	height: 60px;
+  }
+  #secondary-menu h2 {
+    border-bottom-color: #ccc;
+  }
+  
+  .sortableBox {  
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+	padding: 5px 5px 50px 5px;
+    border: 1px solid transparent;
+  }
+  .sortableBox  li {
+    margin: 0 5px 5px 5px;
+    padding: 0 0 5px 0;
+    font-size: 13px;
+	cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    border: 1px solid transparent;
+  }
+  .sortableBox  li:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
+  .sortableBox li p {
+    margin: 0;
+    padding: 5px;
+  }
+  .subcategory {
+     font-weight: bold; 
+     background-color: #ccc;
+  }
+  
+  .clearblock {
+    clear: both;
+    height: 5px;
+  }
+  
+  .editable {
+    background: url(https://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/pencil-icon.png) no-repeat right 0
+  }
+  
+  .card-item {
+    border: 1px solid #d3d3d3;
+    background: #e6e6e6 url("https://code.jquery.com/ui/1.11.4/themes/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cdcdcd), to(#efefef));
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #efefef, #cdcdcd);
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #efefef, #cdcdcd);
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #efefef, #cdcdcd);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #efefef, #cdcdcd);
+    color: #555555;
+  }
+  
+  button {
+    font-size: 2em;
+    padding: 10px;
+    color: #6E273D;
+	cursor: pointer;
+	margin-bottom: 10px;
+  }
+  button:hover{
+    color: #F00034;
+  }
+  
+  .message-wrapper {
+    background-color: #efefef;
+	border: 2px solid #F00034;
+	position: relative;
+	margin: 0 auto 30px;
+  }
+  .message {
+	font-size: 20px;
+	line-height: 1.2em;
+	padding: 15px 30px;
+	margin: 0;
+  }
+
+  #close-message {
+    position: absolute;
+	top: -5px;
+	right: 5px;
+	padding: 2px;
+	font-size: 50px;
+	background-color: transparent;
+	border-style: none;
+	-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+  }
+   #bottom-message {
+     display: none;
+   }
+  </style>

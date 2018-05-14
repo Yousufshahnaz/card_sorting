@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ICR Card Sort</title>
+  
+  <?!= getContent('css'); ?>
+  
+</head>
+
+
+
+<body>
+
+<div id="page-wrapper" class="container_16">
+  <div id="contact"> <p>Created by <a href="mailto:gabriele.sani@icr.ac.uk">Gabriele Sani</a> for the new ICR Intranet. Please do get in touch with any feedback!</p></div> 
+
+  <div id="top-message" class="message-wrapper column grid_16">
+    <div id="welcome-message" class="message">
+	  <p>Thank you for taking part in this activity as it will help us organise the new intranet based on YOU. </p> 
+	  <p>Please drag and drop the items from the yellow 'box' on the left into any of the 'boxes' on the right (You can also organise the items under other items that you have already moved, and change the name of the boxes: just click on the names you want to change to edit them.) </p> 
+	  <p>If you would not know where to place an item, please put it under 'Search', since that is what we would expect you to do if you cannot reach an item via the menus. </p>
+      <p>There is no right or wrong answer. Just do what comes naturally. </p> 
+	  <p>When you're done click the 'Submit' button at bottom of the page.</p>
+	  <button id="close-message" onclick="document.getElementById('top-message').style.display = 'none';">+</button>
+	</div>
+  </div>
+
+  <div class="clearblock"></div>
+  
+  <div class="column grid_2 content" id="left">
+    <div class="wrapper">
+		<h2>Items to sort</h2> 
+		<ul id="sortableStart" class="sortableBox" ondrop="dragdrop_handler(event);" ondragover="dragover_handler(event);" ondragleave="dragleave_handler(event);" >
+         
+         
+          <?!= addCards(); ?>
+		
+        
+          <div class="clearblock"></div>
+		</ul>
+	</div>  
+  </div>
+  
+  <div class="column grid_14" id="right">
+  
+	<div id="top-wrapper" class="row">
+  
+		<img id="logo" src="http://www.icr.ac.uk/assets/img/logo.png" height="60px" style="margin: 30px 0;">
+
+		<div id="secondary-menu" class="content grid_12">
+		
+		  <?!= addSecondary(); ?>
+          
+		</div>
+	</div>
+    
+	<div class="separator"></div>
+	
+	<div id="primary-menu" class="row content grid_16">
+
+		<?!= addPrimary(); ?>
+		
+    </div>
+	
+	<div class="separator"></div>
+	
+	<div id="bottom_wrapper" class="row">
+			
+			<button id="submit-button" onclick="var a = SubmitValues(); google.script.run.printValues(a); document.getElementById('bottom-message').style.display = 'block'; document.getElementById('submit-button').style.display = 'none';">Submit</button> 
+			
+			<div id="bottom-message" class="message-wrapper message">
+			  <div id="thank-you"class="message">
+			    <p>Thank you! </p>
+			    <p>Please feel free to forward this page to anyone you think would be willing to participate. </p>
+			    <button id="close-message" onclick="document.getElementById('bottom-message').style.display = 'none';">+</button>
+			  </div>
+			</div>
+    </div>
+	   
+  </div> 
+  
+  
+<div class="clearblock"></div>
+
+</div>
+  
+<?!= getContent('js'); ?>
+
+</body>
+</html>
